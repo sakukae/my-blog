@@ -16,6 +16,7 @@ import katex from "katex";
 import "katex/dist/contrib/mhchem.mjs"; // 加载 mhchem 扩展
 import rehypeSlug from "rehype-slug";
 import remarkDirective from "remark-directive"; /* Handle directives */
+import remarkBreaks from "remark-breaks"
 import remarkMath from "remark-math";
 import rehypeCallouts from "rehype-callouts";
 import remarkSectionize from "remark-sectionize";
@@ -197,6 +198,7 @@ export default defineConfig({
 	markdown: {
 		processor: unified({
 			remarkPlugins: [
+				remarkBreaks, 
 				remarkMath,
 				remarkReadingTime,
 				remarkImageGrid,
