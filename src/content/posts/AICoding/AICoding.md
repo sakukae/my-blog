@@ -28,7 +28,7 @@ draft: false
 **现在：**
 现实世界（产品经理） <--> 沟通者（程序员）<--> 技术语言 <--> AI <--> 计算机运行时
 因此，在现在这个大环境下，学会如何正确高效的使用 AI 是非常有必要的。
-![](.\images\AI\ai-coding\d1.avif)
+![](..\images\AI\ai-coding\d1.avif)
 对于使用 AI 比较生疏的，可以参考以下文章 ↓
 暂时无法在飞书文档外展示此内容
 
@@ -44,13 +44,13 @@ draft: false
 
 ### 1. 简易上手版
 
-在 VS Code 中安装 Claude Code、Codex 插件
-![](.\images\AI\ai-coding\d2.avif)
+在 VS Code 中安装 OpenCode、Claude Code、Codex 插件
+![](..\images\AI\ai-coding\d2.avif)
 此时安装完，是无法使用的，要么使用官方账号登录，要么使用第三方中转，这里推荐使用 cc-switch 来管理 AI 工具，这是一个开源软件，可以可视化管理 AI 工具的供应商以及 skills、mcp 等。
-![](.\images\AI\ai-coding\d3.avif)
+![](..\images\AI\ai-coding\d3.avif)
 安装完上述插件后，在 cc-switch 中直接添加并且配置 URL 和 api key 之后即可使用
-![](.\images\AI\ai-coding\d4.avif)
-![](.\images\AI\ai-coding\d5.avif)
+![](..\images\AI\ai-coding\d4.avif)
+![](..\images\AI\ai-coding\d5.avif)
 只要把红色框框的都填写完，就可以点击添加，这时候重启 VS Code 就可以发现，你的 CLI 工具可以打开了。
 
 ### 2. 稳定主流版
@@ -58,7 +58,7 @@ draft: false
 - VS Code 以及插件，或 终端运行 CLI
 
 2.1 安装 Git
-暂时无法在飞书文档外展示此内容
+Git：https://git-scm.com/install/windows
 详细教程参考 https://blog.csdn.net/mukes/article/details/115693833 即可
 
 ```Bash
@@ -70,11 +70,10 @@ git --version #通过这个来验证git是否已经成功安装
 - 让 AI 帮你比较代码的历史版本差异
 - 回退版本，如：请使用 git 帮我回退到上一个版本
 
-### 2.2 安装 nodejs
-
-暂时无法在飞书文档外展示此内容
-官网包一路往下点下一步即可（建议别安装在 C盘），或者可以使用 nvm 来管理 nodejs（推荐）
-暂时无法在飞书文档外展示此内容
+#### 2.2 安装 Node.js
+Node.js：https://nodejs.org/zh-cn
+官网包一路往下点下一步即可（建议别安装在 C盘），或者可以使用 NVM 来管理 nodejs（推荐）
+NVM：https://nvm.uihtm.com/
 安装教程详细看官方文档即可，也可以在 CSDN 上搜索安装教程，官网安装的基本上自动配置环境变量。
 
 ```Bash
@@ -83,21 +82,20 @@ node -v
 npm -v 
 ```
 
-### 2.3 安装 CLI
+#### 2.3 安装 CLI
 
 使用 npm ，先前安装的 nodejs 的作用来了
 
 - 安装 Claude Code
 
 ```Bash
-npm install -g @anthropic-ai/claude-code #已弃用，建议查看官网
+npm install -g @anthropic-ai/claude-code #已弃用
 claude --version #检查是否已经安装成功
 ```
 
-直接复制以下的内容到终端运行即可：
-
+Windows PowerShell:
 ```Plain
-& ([scriptblock]::Create((New-Object Net.WebClient).DownloadString("https://claude-zh.cn/scripts/install.ps1")))
+irm https://claude.ai/install.ps1 | iex
 ```
 
 - 安装 Codex
@@ -109,19 +107,19 @@ codex --version #检查是否已经安装成功
 
 最后，使用图形化开源软件 cc-swtich 来配置 API
 在终端输入 claude 或者 codex 即可呼起对应的 CLI
-[图片]
+![](..\images\AI\ai-coding\d6.avif)
 
-### 2.4 安装桌面端工具（推荐）
+#### 2.4 安装桌面端工具（推荐）
 
 均建议使用 cc-switch 代理
 OpenCode
+https://opencode.ai/zh
 开源，并且内置支持 deepseek v4 flash 免费版；支持其他 AI 使用
-暂时无法在飞书文档外展示此内容
 
 Claude Code
+https://www.anthropic.com/product/claude-code
 支持其他 AI 使用，建议搭配 cc-switch 使用
-暂时无法在飞书文档外展示此内容
 
 Codex
-仅支持 GPT
-暂时无法在飞书文档外展示此内容
+https://chatgpt.com/zh-Hans-CN/codex
+支持其他 AI 使用，建议搭配 cc-switch 使用
