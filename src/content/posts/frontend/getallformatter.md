@@ -91,6 +91,6 @@ description: A compact rendering of all collected frontmatter records.
 
 ## 6. 验收成果
 
-![](..\images\frontend\vue\d1.avif)
+![](../images/frontend/vue/d1.avif)
 
 

@@ -27,7 +27,7 @@ draft: false
 **现在：**
 现实世界（产品经理） <--> 沟通者（程序员）<--> 技术语言 <--> AI <--> 计算机运行时
 因此，在现在这个大环境下，学会如何正确高效的使用 AI 是非常有必要的。
-![](..\images\AI\ai-coding\d1.avif)
+![](../images/AI/ai-coding/d1.avif)
 对于使用 AI 比较生疏的，可以参考以下文章 ↓
 暂时无法在飞书文档外展示此内容
 
@@ -68,12 +68,12 @@ npm -v
 ### 2. 简易上手版
 
 **在 VS Code 中安装 OpenCode、Claude Code、Codex 插件**
-![](..\images\AI\ai-coding\d2.avif)
+![](../images/AI/ai-coding/d2.avif)
 **此时安装完，是无法使用的，要么使用官方账号登录，要么使用第三方中转，这里推荐使用开源软件 [**cc-switch**](https://ccswitch.io/zh/) 来管理 AI 工具，可以统一管理 AI 工具的供应商以及 Skills、MCP 等。**
-![点击加号](..\images\AI\ai-coding\d3.avif)
+![点击加号](../images/AI/ai-coding/d3.avif)
 **安装完上述插件后，在 cc-switch 中直接添加并且配置 URL 和 api key 之后即可使用**
-![选择供应商](..\images\AI\ai-coding\d4.avif)
-![配置 API](..\images\AI\ai-coding\d5.avif)
+![选择供应商](../images/AI/ai-coding/d4.avif)
+![配置 API](../images/AI/ai-coding/d5.avif)
 **只要把红色框框的都填写完，就可以点击添加，这时候重启 VS Code 就可以发现，你的 CLI 工具可以打开了。**
 
 ### 3. 稳定主流版
@@ -105,7 +105,7 @@ codex --version #检查是否已经安装成功
 
 最后，使用图形化开源软件 cc-switch 来配置 API
 在终端输入 claude 或者 codex 即可呼起对应的 CLI
-![](..\images\AI\ai-coding\d6.avif)
+![](../images/AI/ai-coding/d6.avif)
 
 #### 3.2 安装桌面端工具（推荐）
 **推荐理由**：方便管理对话
@@ -152,7 +152,7 @@ https://chatgpt.com/zh-Hans-CN/codex
 
 > 注意：两者互补而非替代，MCP 是“工具”，Skills 是“方法论”。
 
-![](..\images\AI\ai-coding\d7.avif)
+![](../images/AI/ai-coding/d7.avif)
 
 ### 4. MCP 与 Skills 的安装方法
 #### 4.1 资源获取
@@ -169,9 +169,9 @@ https://skillsmp.com/zh
 **4.2.1 MCP**
 首先打开你需要配置的 MCP 对应的网站/仓库，根据官方的文档来选择配置方案。
 如果是只有如图所示的 json 片段，那么可以手动写入对应 Agent 的配置文件夹中或者在 cc-switch 中进行配置统一管理。
-![json](..\images\AI\ai-coding\d8.avif)
+![json](../images/AI/ai-coding/d8.avif)
 下面仅展示在 cc-switch 中如何配置：
-![](..\images\AI\ai-coding\d9.avif)
+![](../images/AI/ai-coding/d9.avif)
 将 json 粘贴在 json 配置中即可。
 > 其余情况参考官方文档的配置方案。
 
@@ -179,9 +179,9 @@ https://skillsmp.com/zh
 使用 `npx` 配置，或者使用 cc-switch 来配置，这里仅展示在 cc-switch 中如何配置。
 点击 skills -> 发现技能 -> 仓库管理 -> 填写对应 skills 在 github 上的仓库地址
 这里以 **Everything Claude Code** 为例，将地址粘贴至 cc-switch 中，点击添加仓库，此刻稍等一会；此时与网络环境有关，github 的 skills 需要搭配 VPN 来获取仓库，点击一次即可，不久后会显示 xxx 仓库已经添加。
-![](..\images\AI\ai-coding\d10.avif)
+![](../images/AI/ai-coding/d10.avif)
 **然后在仓库中，选择你需要的 skills 下载即可**
-![](..\images\AI\ai-coding\d11.avif)
+![](../images/AI/ai-coding/d11.avif)
 
 最后在使用的时候，记得要给对应的 Agent 开启技能（skills）和 MCP 即可。
 
@@ -198,10 +198,10 @@ https://skillsmp.com/zh
 ```
 #### 2. 命令调用
 - **在 Claude Code 和 OpenCode 中**：输入 `/` ,即可选择 Skills 或 MCP。
-![](..\images\AI\ai-coding\d12.avif)
+![](../images/AI/ai-coding/d12.avif)
 
 - **在 Codex 中**： 输入`$` ,即可选择 Skills;输入 `/` ，又可选择 Skills 也可以选择 MCP.
-![](..\images\AI\ai-coding\d13.avif)
+![](../images/AI/ai-coding/d13.avif)
 
 #### 3. 仅写普通提示词（不推荐）
 当你没有说明要使用什么 MCP 或者 Sklls 的时候，此时会根据模型能力，按需获取工具使用。
