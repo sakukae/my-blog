@@ -90,7 +90,7 @@
 	"packageManager": "pnpm@9.14.4",
 	"lint-staged": {
 		"*.{js,ts,astro,svelte,md,mdx,json}": [
-			"biome format --write",
+			"biome format --write --no-errors-on-unmatched",
 			"biome check --write --no-errors-on-unmatched"
 		]
 	}
