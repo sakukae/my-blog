@@ -15,6 +15,8 @@ draft: false
 - **通义千问**：阿里巴巴的AI助手
 
 ### 创意工具
+- **Stitch**：谷歌的AI设计，有app和web两种形式，支持导出Figma
+- **GPT Img2**：GPT的生图AI，宣传可以在米粒上刻中文
 - **Midjourney**：AI绘画工具，生成高质量艺术作品
 - **Stable Diffusion**：开源AI绘画工具
 - **即梦**：AI视频编辑工具
