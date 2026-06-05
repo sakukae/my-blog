@@ -41,7 +41,7 @@ jobs:
       - name: Deploy to server
         uses: burnett01/rsync-deployments@7.0.1
         with:
-          switches: -avzr --delete --exclude='.git'
+          switches: -rlvzD --delete --no-perms --no-owner --no-group --exclude='.git'
           path: dist/
           remote_path: ${{ secrets.SERVER_DEPLOY_PATH }}
           remote_host: ${{ secrets.SERVER_HOST }}
