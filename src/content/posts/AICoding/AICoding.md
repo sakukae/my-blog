@@ -29,8 +29,6 @@ draft: false
 因此，在现在这个大环境下，学会如何正确高效的使用 AI 是非常有必要的。
 ![](../images/AI/ai-coding/d1.avif)
 对于使用 AI 比较生疏的，可以参考以下文章 ↓
-暂时无法在飞书文档外展示此内容
-
 > 入门：安装 Codex、Claude Code或者 Trae、Cursor 等 AI Coding 插件/软件
 > 进阶：使用 MCP、Skills、SubAgent
 
