@@ -24,9 +24,9 @@ export const friendsPageConfig: FriendsPageConfig = {
 export const friendsConfig: FriendLink[] = [
 	{
 		title: "TouchAI",
-		imgurl: "https://touch-ai.org/",
+		imgurl: "https://avatars.githubusercontent.com/u/266058215?s=200&v=4",
 		desc: "一触即达的极简桌面效率Agent。",
-		siteurl: "https://github.com/TouchAI-org/TouchAI",
+		siteurl: "https://touch-ai.org/",
 		tags: ["Agent"],
 		weight: 10, // 权重，数字越大排序越靠前
 		enabled: true, // 是否启用
@@ -34,7 +34,7 @@ export const friendsConfig: FriendLink[] = [
 	{
 		title: "Dromara",
 		imgurl: "https://dromara.org/assets/img/logo-animation/logo.webp",
-		desc: "Dromara 官网",
+		desc: "开源爱好者齐聚的非盈利组织",
 		siteurl: "https://dromara.org/",
 		tags: ["Docs"],
 		weight: 9,
