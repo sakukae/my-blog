@@ -24,8 +24,7 @@ export const friendsPageConfig: FriendsPageConfig = {
 export const friendsConfig: FriendLink[] = [
 	{
 		title: "TouchAI",
-		imgurl:
-			"https://avatars.githubusercontent.com/u/266058215?s=200&v=4",
+		imgurl: "https://avatars.githubusercontent.com/u/266058215?s=200&v=4",
 		desc: "一触即达的极简桌面效率Agent。",
 		siteurl: "https://github.com/TouchAI-org/TouchAI",
 		tags: ["Agent"],

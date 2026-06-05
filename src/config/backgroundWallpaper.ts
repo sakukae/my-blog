@@ -73,10 +73,7 @@ export const backgroundWallpaper: BackgroundWallpaperConfig = {
 			// 主页横幅主标题字体大小
 			titleSize: "3.8rem",
 			// 主页横幅副标题
-			subtitle: [
-				"卡库祝您今天愉快！",
-				"AI实战/Web前端/开源贡献/Vibe Coding",
-			],
+			subtitle: ["卡库祝您今天愉快！", "AI实战/Web前端/开源贡献/Vibe Coding"],
 			// 主页横幅副标题字体大小
 			subtitleSize: "1.5rem",
 			typewriter: {

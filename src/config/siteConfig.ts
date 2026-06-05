@@ -16,8 +16,7 @@ export const siteConfig: SiteConfig = {
 	site_url: "https://kakue.top",
 
 	// 站点描述
-	description:
-		"Kaku 的个人博客网站",
+	description: "Kaku 的个人博客网站",
 
 	// 站点关键词
 	keywords: [
