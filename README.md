@@ -4,9 +4,8 @@
 
 > 一个基于 Astro 的个人博客站点，用来记录技术、生活和随想。
 
-[在线访问](https://kaku.top) · [RSS](https://your-site.com/rss.xml) · [关于我](https://your-site.com/about) · [留言板](https://your-site.com/guestbook)
+[在线访问](https://kaku.top) · [RSS](https://kaku.top/rss.xml) · [关于我](https://kaku.top/about) · [留言板](https://kaku.top/guestbook)
 
-![首页预览](./docs/images/1.webp)
 
 ## 简介
 
