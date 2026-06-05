@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Kaku</title><description>Kaku site</description><link>https://kakue.top/</link><templateTheme>Firefly</templateTheme><templateThemeVersion>6.10.7</templateThemeVersion><templateThemeUrl>https://github.com/CuteLeaf/Firefly</templateThemeUrl><lastBuildDate>2026年6月5日 17:20:10</lastBuildDate><item><title>AI Coding 基础入门教程</title><link>https://kakue.top/posts/aicoding/aicoding/</link><guid isPermaLink="true">https://kakue.top/posts/aicoding/aicoding/</guid><description>包括 Agent、MCP、Skills 的安装与使用</description><pubDate>Mon, 01 Jun 2026 00:00:00 GMT</pubDate><content:encoded>&lt;section&gt;&lt;h2&gt;一、对 AI 编程的认知&lt;a href=&quot;#一对-ai-编程的认知&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;&lt;section&gt;&lt;h3&gt;1. AI Coding 是什么&lt;a href=&quot;#1-ai-coding-是什么&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;是指&lt;strong&gt;专业程序员在自身技术能力之上&lt;/strong&gt;，用 AI 辅助写代码、查问题、做优化。Vibe Coding 则是&lt;strong&gt;非技术人员用自然语言&lt;/strong&gt;来描述想法，完成小需求。&lt;/p&gt;&lt;p&gt;高效的开发者会使用 AI 工具辅助日常工作。AI 可以帮助你：&lt;/p&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;加速学习曲线&lt;/strong&gt;：将复杂概念分解为易懂的小块&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;提高编码效率&lt;/strong&gt;：自动补全、代码生成、重构建议&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;减少重复劳动&lt;/strong&gt;：快速生成样板代码和测试用例&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;实时问题解决&lt;/strong&gt;：即时获得调试建议和错误修复&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;探索新技术&lt;/strong&gt;：快速了解陌生的框架和语言&lt;/li&gt;
+&lt;/ul&gt;&lt;/section&gt;&lt;section&gt;&lt;h3&gt;2. 程序员的角色定位&lt;a href=&quot;#2-程序员的角色定位&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;以前：&lt;/strong&gt;&lt;br /&gt;
+现实世界（产品经理） &amp;lt;—&amp;gt; 沟通者（程序员） &amp;lt;—&amp;gt; 计算机运行时&lt;br /&gt;
+&lt;strong&gt;现在：&lt;/strong&gt;&lt;br /&gt;
+现实世界（产品经理） &amp;lt;—&amp;gt; 沟通者（程序员）&amp;lt;—&amp;gt; 技术语言 &amp;lt;—&amp;gt; AI &amp;lt;—&amp;gt; 计算机运行时&lt;br /&gt;
+因此，在现在这个大环境下，学会如何正确高效的使用 AI 是非常有必要的。&lt;br /&gt;
+&lt;img alt=&quot;&quot; loading=&quot;lazy&quot; width=&quot;1280&quot; height=&quot;719&quot; src=&quot;/_astro/d1.DXs6xXxr_1svyMT.webp&quot; srcset=&quot;/_astro/d1.DXs6xXxr_Z1SpswC.webp 640w, /_astro/d1.DXs6xXxr_182ab0.webp 750w, /_astro/d1.DXs6xXxr_ZcSNhs.webp 828w, /_astro/d1.DXs6xXxr_ra2SI.webp 1080w, /_astro/d1.DXs6xXxr_1svyMT.webp 1280w&quot; /&gt;&lt;br /&gt;
+对于使用 AI 比较生疏的，可以参考以下文章 ↓&lt;br /&gt;
+暂时无法在飞书文档外展示此内容&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;入门：安装 Codex、Claude Code或者 Trae、Cursor 等 AI Coding 插件/软件&lt;br /&gt;
+进阶：使用 MCP、Skills、SubAgent&lt;/p&gt;&lt;/blockquote&gt;&lt;/section&gt;&lt;/section&gt;
+&lt;section&gt;&lt;h2&gt;二、搭建 AI 编程环境&lt;a href=&quot;#二搭建-ai-编程环境&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;&lt;section&gt;&lt;h3&gt;1. 最小环境&lt;a href=&quot;#1-最小环境&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;你需要的最小环境：&lt;/p&gt;&lt;ul&gt;
+&lt;li&gt;Git（看 diff、回滚、提交）&lt;/li&gt;
+&lt;li&gt;Node.js（Claude/Gemini/Codex 三套 CLI 都用得到；建议 Node 20+，更推荐 Node 22）&lt;/li&gt;
+&lt;li&gt;使用 cc-switch 统一管理中转&lt;/li&gt;
+&lt;/ul&gt;&lt;section&gt;&lt;h4&gt;1.1 安装 Git&lt;a href=&quot;#11-安装-git&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;&lt;strong&gt;Git&lt;/strong&gt;：&lt;a href=&quot;https://git-scm.com/install/windows&quot; target=&quot;_blank&quot;&gt;https://git-scm.com/install/windows&lt;/a&gt;&lt;br /&gt;
+详细教程参考 &lt;a href=&quot;https://blog.csdn.net/mukes/article/details/115693833&quot; target=&quot;_blank&quot;&gt;https://blog.csdn.net/mukes/article/details/115693833&lt;/a&gt; 即可&lt;/p&gt;&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;1&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;git&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;--version&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;#通过这个来验证git是否已经成功安装&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;&lt;p&gt;如果你要使用 AI Coding 那么 Git 是非常有必要安装的，因为可以回退版本，即使 AI 写错了，也能够快速回到上一个版本，如果不会 Git 那么你也可以让 AI 来帮你回退版本，使用场景分别为：&lt;/p&gt;&lt;ul&gt;
+&lt;li&gt;让 AI 帮你比较代码的历史版本差异&lt;/li&gt;
+&lt;li&gt;回退版本，如：请使用 git 帮我回退到上一个版本&lt;/li&gt;
+&lt;/ul&gt;&lt;/section&gt;&lt;section&gt;&lt;h4&gt;1.2 安装 Node.js&lt;a href=&quot;#12-安装-nodejs&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;&lt;strong&gt;Node.js&lt;/strong&gt;：&lt;a href=&quot;https://nodejs.org/zh-cn&quot; target=&quot;_blank&quot;&gt;https://nodejs.org/zh-cn&lt;/a&gt;&lt;br /&gt;
+官网包一路往下点下一步即可（建议别安装在 C盘），或者可以使用 NVM 来管理 nodejs（推荐）&lt;br /&gt;
+&lt;strong&gt;NVM&lt;/strong&gt;：&lt;a href=&quot;https://nvm.uihtm.com/&quot; target=&quot;_blank&quot;&gt;https://nvm.uihtm.com/&lt;/a&gt;&lt;br /&gt;
+安装教程详细看官方文档即可，也可以在 CSDN 上搜索安装教程，官网安装的基本上自动配置环境变量。&lt;/p&gt;&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;1&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;#验证nodejs是否成功安装&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;2&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;node&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;-v&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;3&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;npm&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;-v&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;&lt;/section&gt;&lt;/section&gt;&lt;section&gt;&lt;h3&gt;2. 简易上手版&lt;a href=&quot;#2-简易上手版&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;在 VS Code 中安装 OpenCode、Claude Code、Codex 插件&lt;/strong&gt;&lt;br /&gt;
+&lt;img alt=&quot;&quot; loading=&quot;lazy&quot; width=&quot;1280&quot; height=&quot;770&quot; src=&quot;/_astro/d2.Cf4FKQ4d_hAvdh.webp&quot; srcset=&quot;/_astro/d2.Cf4FKQ4d_2kEwOP.webp 640w, /_astro/d2.Cf4FKQ4d_ARpMl.webp 750w, /_astro/d2.Cf4FKQ4d_Z2s83rs.webp 828w, /_astro/d2.Cf4FKQ4d_1PgeRS.webp 1080w, /_astro/d2.Cf4FKQ4d_hAvdh.webp 1280w&quot; /&gt;&lt;br /&gt;
+&lt;strong&gt;此时安装完，是无法使用的，要么使用官方账号登录，要么使用第三方中转，这里推荐使用开源软件 &lt;a href=&quot;https://ccswitch.io/zh/&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;cc-switch&lt;/strong&gt;&lt;/a&gt; 来管理 AI 工具，可以统一管理 AI 工具的供应商以及 Skills、MCP 等。&lt;/strong&gt;&lt;br /&gt;
+&lt;/p&gt;&lt;figure&gt;&lt;img alt=&quot;点击加号&quot; loading=&quot;lazy&quot; width=&quot;1280&quot; height=&quot;836&quot; src=&quot;/_astro/d3.DY8cGU3K_EaUI2.webp&quot; srcset=&quot;/_astro/d3.DY8cGU3K_nvLM0.webp 640w, /_astro/d3.DY8cGU3K_X9tRH.webp 750w, /_astro/d3.DY8cGU3K_1jP7rh.webp 828w, /_astro/d3.DY8cGU3K_2eWX0O.webp 1080w, /_astro/d3.DY8cGU3K_EaUI2.webp 1280w&quot; /&gt;&lt;figcaption&gt;点击加号&lt;/figcaption&gt;&lt;/figure&gt;&lt;br /&gt;
+&lt;strong&gt;安装完上述插件后，在 cc-switch 中直接添加并且配置 URL 和 api key 之后即可使用&lt;/strong&gt;&lt;br /&gt;
+&lt;figure&gt;&lt;img alt=&quot;选择供应商&quot; loading=&quot;lazy&quot; width=&quot;1280&quot; height=&quot;841&quot; src=&quot;/_astro/d4.DVXNCiw6_17w4LX.webp&quot; srcset=&quot;/_astro/d4.DVXNCiw6_1dsLGm.webp 640w, /_astro/d4.DVXNCiw6_Z1nXpek.webp 750w, /_astro/d4.DVXNCiw6_Z12hLEK.webp 828w, /_astro/d4.DVXNCiw6_Z2mS1Jb.webp 1080w, /_astro/d4.DVXNCiw6_17w4LX.webp 1280w&quot; /&gt;&lt;figcaption&gt;选择供应商&lt;/figcaption&gt;&lt;/figure&gt;&lt;br /&gt;
+&lt;figure&gt;&lt;img alt=&quot;配置 API&quot; loading=&quot;lazy&quot; width=&quot;1280&quot; height=&quot;836&quot; src=&quot;/_astro/d5.DE56s3jZ_Z2jI9nx.webp&quot; srcset=&quot;/_astro/d5.DE56s3jZ_1KHmCF.webp 640w, /_astro/d5.DE56s3jZ_2ll4In.webp 750w, /_astro/d5.DE56s3jZ_Z2naqvY.webp 828w, /_astro/d5.DE56s3jZ_ZIV75K.webp 1080w, /_astro/d5.DE56s3jZ_Z2jI9nx.webp 1280w&quot; /&gt;&lt;figcaption&gt;配置 API&lt;/figcaption&gt;&lt;/figure&gt;&lt;br /&gt;
+&lt;strong&gt;只要把红色框框的都填写完，就可以点击添加，这时候重启 VS Code 就可以发现，你的 CLI 工具可以打开了。&lt;/strong&gt;&lt;p&gt;&lt;/p&gt;&lt;/section&gt;&lt;section&gt;&lt;h3&gt;3. 稳定主流版&lt;a href=&quot;#3-稳定主流版&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;VS Code 以及插件，或 终端运行 CLI&lt;/li&gt;
+&lt;/ul&gt;&lt;section&gt;&lt;h4&gt;3.1 安装 CLI&lt;a href=&quot;#31-安装-cli&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;使用 npm ，先前安装的 nodejs 的作用来了&lt;/p&gt;&lt;ul&gt;
+&lt;li&gt;安装 Claude Code&lt;/li&gt;
+&lt;/ul&gt;&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;1&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;npm&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;install&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;-g&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;@anthropic-ai/claude-code&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;#已弃用&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;2&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;claude&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;--version&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;#检查是否已经安装成功&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;&lt;p&gt;Windows PowerShell:&lt;/p&gt;&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;1&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;irm https://claude.ai/install.ps1 | iex&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;安装 Codex&lt;/li&gt;
+&lt;/ul&gt;&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;1&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;npm&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;i&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;-g&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;@openai/codex&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;# 也可以安装桌面应用&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;2&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;codex&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;--version&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;#检查是否已经安装成功&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;&lt;p&gt;最后，使用图形化开源软件 cc-switch 来配置 API&lt;br /&gt;
+在终端输入 claude 或者 codex 即可呼起对应的 CLI&lt;br /&gt;
+&lt;img alt=&quot;&quot; loading=&quot;lazy&quot; width=&quot;1280&quot; height=&quot;310&quot; src=&quot;/_astro/d6.BaU9k2VL_ZxkKb7.webp&quot; srcset=&quot;/_astro/d6.BaU9k2VL_1kFulC.webp 640w, /_astro/d6.BaU9k2VL_1ABXkE.webp 750w, /_astro/d6.BaU9k2VL_yrE8Q.webp 828w, /_astro/d6.BaU9k2VL_Z1Lh1QN.webp 1080w, /_astro/d6.BaU9k2VL_ZxkKb7.webp 1280w&quot; /&gt;&lt;/p&gt;&lt;/section&gt;&lt;section&gt;&lt;h4&gt;3.2 安装桌面端工具（推荐）&lt;a href=&quot;#32-安装桌面端工具推荐&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;&lt;strong&gt;推荐理由&lt;/strong&gt;：方便管理对话&lt;/p&gt;&lt;p&gt;均建议使用 cc-switch 代理&lt;br /&gt;
+OpenCode&lt;br /&gt;
+&lt;a href=&quot;https://opencode.ai/zh&quot; target=&quot;_blank&quot;&gt;https://opencode.ai/zh&lt;/a&gt;&lt;br /&gt;
+开源，并且内置支持 DeepSeek v4 flash 免费版；支持其他 AI 使用&lt;/p&gt;&lt;p&gt;Claude Code&lt;br /&gt;
+&lt;a href=&quot;https://www.anthropic.com/product/claude-code&quot; target=&quot;_blank&quot;&gt;https://www.anthropic.com/product/claude-code&lt;/a&gt;&lt;br /&gt;
+支持其他 AI 使用，建议搭配 cc-switch 使用&lt;/p&gt;&lt;p&gt;Codex&lt;br /&gt;
+&lt;a href=&quot;https://chatgpt.com/zh-Hans-CN/codex&quot; target=&quot;_blank&quot;&gt;https://chatgpt.com/zh-Hans-CN/codex&lt;/a&gt;&lt;br /&gt;
+支持其他 AI 使用，建议搭配 cc-switch 使用&lt;/p&gt;&lt;/section&gt;&lt;/section&gt;&lt;/section&gt;
+&lt;section&gt;&lt;h2&gt;三、MCP 与 Skills 的使用&lt;a href=&quot;#三mcp-与-skills-的使用&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;为了更好的使用 MCP 与 Skills，首先我们要先了解二者分别是什么意思，二者之间的区别是什么。&lt;/p&gt;&lt;section&gt;&lt;h3&gt;1. MCP 是什么？&lt;a href=&quot;#1-mcp-是什么&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;MCP&lt;/strong&gt; 是 Anthropic 推出的一个开放协议，让 AI 模型可以连接到外部数据源和工具。可以把它理解为 AI 的”USB 接口”——一个标准化的方式来让 Agent 访问外部系统。&lt;/p&gt;&lt;p&gt;&lt;strong&gt;简单来说就是&lt;/strong&gt;：MCP 是“连接协议”，让模型能访问外部工具和数据，如数据库、API、文件系统等。&lt;/p&gt;&lt;/section&gt;&lt;section&gt;&lt;h3&gt;2. Skills 是什么？&lt;a href=&quot;#2-skills-是什么&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;Skills&lt;/strong&gt; 是 Anthropic 公司发布的一个跨平台可移植性的开发标准，是一个可调用工作流/提示模板，本质上是预定义的 prompt + 工作模式。每个 Skill 封装了一类任务的最佳实践。&lt;/p&gt;&lt;p&gt;&lt;strong&gt;简单来说就是&lt;/strong&gt;：Skills 就是一个“方法论”，模块化、可复用的任务流程和操作规范，封装了专业知识、工作方法和执行步骤。&lt;/p&gt;&lt;/section&gt;&lt;section&gt;&lt;h3&gt;3. MCP 与 Skills 的区别&lt;a href=&quot;#3-mcp-与-skills-的区别&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h3&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;对比项&lt;/th&gt;&lt;th&gt;MCP&lt;/th&gt;&lt;th&gt;Skills&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;本质&lt;/td&gt;&lt;td&gt;一套协议，让 AI 连接外部工具、数据源、服务&lt;/td&gt;&lt;td&gt;一组可复用的任务说明和资源&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;解决什么问题&lt;/td&gt;&lt;td&gt;“让模型能调用东西”&lt;/td&gt;&lt;td&gt;“让模型按固定方法做事”&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;典型内容&lt;/td&gt;&lt;td&gt;工具、资源、提示词、远程服务、本地进程&lt;/td&gt;&lt;td&gt;&lt;code&gt;SKILL.md&lt;/code&gt;、脚本、参考资料、模板&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;适合场景&lt;/td&gt;&lt;td&gt;查文档、连 Figma、控浏览器、查数据库、调 API&lt;/td&gt;&lt;td&gt;写论文格式、简历优化、代码审查流程、前端设计规范&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;安装方式&lt;/td&gt;&lt;td&gt;配置 MCP server，常见为 &lt;code&gt;npx&lt;/code&gt;、HTTP URL、OAuth&lt;/td&gt;&lt;td&gt;放到 Skills 目录、使用 Agent 工具自带的插件商城下载&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;是否能执行动作&lt;/td&gt;&lt;td&gt;可以，MCP server 暴露工具给模型调用&lt;/td&gt;&lt;td&gt;本身主要是说明书；可附带脚本，由 Agent 按说明运行&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;安全重点&lt;/td&gt;&lt;td&gt;远程/本地工具可能读取数据或执行操作&lt;/td&gt;&lt;td&gt;技能说明可能影响模型行为，也可能附带脚本&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;blockquote&gt;&lt;p&gt;注意：两者互补而非替代，MCP 是“工具”，Skills 是“方法论”。&lt;/p&gt;&lt;/blockquote&gt;&lt;p&gt;&lt;img alt=&quot;&quot; loading=&quot;lazy&quot; width=&quot;1672&quot; height=&quot;941&quot; src=&quot;/_astro/d7.DVutt_Yy_ZwgkPP.webp&quot; srcset=&quot;/_astro/d7.DVutt_Yy_bO4rf.webp 640w, /_astro/d7.DVutt_Yy_Z2qVVfb.webp 750w, /_astro/d7.DVutt_Yy_1ije6i.webp 828w, /_astro/d7.DVutt_Yy_1wYWAG.webp 1080w, /_astro/d7.DVutt_Yy_Z8r9C.webp 1280w, /_astro/d7.DVutt_Yy_20FW01.webp 1668w, /_astro/d7.DVutt_Yy_ZwgkPP.webp 1672w&quot; /&gt;&lt;/p&gt;&lt;/section&gt;&lt;section&gt;&lt;h3&gt;4. MCP 与 Skills 的安装方法&lt;a href=&quot;#4-mcp-与-skills-的安装方法&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h3&gt;&lt;section&gt;&lt;h4&gt;4.1 资源获取&lt;a href=&quot;#41-资源获取&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;首先先要获取 MCP 和 Skills的资源，先了解一下资源网站。&lt;/p&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;MCP 的资源网站：&lt;br /&gt;
+&lt;a href=&quot;https://mcp.so/&quot; target=&quot;_blank&quot;&gt;https://mcp.so/&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://www.mcpworld.com/&quot; target=&quot;_blank&quot;&gt;https://www.mcpworld.com/&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Skills 的资源网站&lt;br /&gt;
+&lt;a href=&quot;https://www.skills.sh/&quot; target=&quot;_blank&quot;&gt;https://www.skills.sh/&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://skillsmp.com/zh&quot; target=&quot;_blank&quot;&gt;https://skillsmp.com/zh&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;&lt;/section&gt;&lt;section&gt;&lt;h4&gt;4.2 如何安装/配置&lt;a href=&quot;#42-如何安装配置&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;&lt;strong&gt;4.2.1 MCP&lt;/strong&gt;&lt;br /&gt;
+首先打开你需要配置的 MCP 对应的网站/仓库，根据官方的文档来选择配置方案。&lt;br /&gt;
+如果是只有如图所示的 json 片段，那么可以手动写入对应 Agent 的配置文件夹中或者在 cc-switch 中进行配置统一管理。&lt;br /&gt;
+&lt;/p&gt;&lt;figure&gt;&lt;img alt=&quot;json&quot; loading=&quot;lazy&quot; width=&quot;1043&quot; height=&quot;769&quot; src=&quot;/_astro/d8.DS6yKgqw_Z2dLAiT.webp&quot; srcset=&quot;/_astro/d8.DS6yKgqw_Z50vaO.webp 640w, /_astro/d8.DS6yKgqw_Z28S6fH.webp 750w, /_astro/d8.DS6yKgqw_Z22gzdq.webp 828w, /_astro/d8.DS6yKgqw_Z2dLAiT.webp 1043w&quot; /&gt;&lt;figcaption&gt;json&lt;/figcaption&gt;&lt;/figure&gt;&lt;br /&gt;
+下面仅展示在 cc-switch 中如何配置：&lt;br /&gt;
+&lt;img alt=&quot;&quot; loading=&quot;lazy&quot; width=&quot;1349&quot; height=&quot;779&quot; src=&quot;/_astro/d9.TUDBL37V_8F70l.webp&quot; srcset=&quot;/_astro/d9.TUDBL37V_Zergea.webp 640w, /_astro/d9.TUDBL37V_1CWmie.webp 750w, /_astro/d9.TUDBL37V_Zh06Kl.webp 828w, /_astro/d9.TUDBL37V_RoHpz.webp 1080w, /_astro/d9.TUDBL37V_ZDwWxz.webp 1280w, /_astro/d9.TUDBL37V_8F70l.webp 1349w&quot; /&gt;&lt;br /&gt;
+将 json 粘贴在 json 配置中即可。&lt;p&gt;&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;其余情况参考官方文档的配置方案。&lt;/p&gt;&lt;/blockquote&gt;&lt;p&gt;&lt;strong&gt;4.2.2 Skills&lt;/strong&gt;&lt;br /&gt;
+使用 &lt;code&gt;npx&lt;/code&gt; 配置，或者使用 cc-switch 来配置，这里仅展示在 cc-switch 中如何配置。&lt;br /&gt;
+点击 skills -&amp;gt; 发现技能 -&amp;gt; 仓库管理 -&amp;gt; 填写对应 skills 在 github 上的仓库地址&lt;br /&gt;
+这里以 &lt;strong&gt;Everything Claude Code&lt;/strong&gt; 为例，将地址粘贴至 cc-switch 中，点击添加仓库，此刻稍等一会；此时与网络环境有关，github 的 skills 需要搭配 VPN 来获取仓库，点击一次即可，不久后会显示 xxx 仓库已经添加。&lt;br /&gt;
+&lt;img alt=&quot;&quot; loading=&quot;lazy&quot; width=&quot;1349&quot; height=&quot;900&quot; src=&quot;/_astro/d10.BDI4Em4U_ZEalbg.webp&quot; srcset=&quot;/_astro/d10.BDI4Em4U_oicc3.webp 640w, /_astro/d10.BDI4Em4U_vmXHa.webp 750w, /_astro/d10.BDI4Em4U_Z1eGivc.webp 828w, /_astro/d10.BDI4Em4U_pozN4.webp 1080w, /_astro/d10.BDI4Em4U_ZF21S.webp 1280w, /_astro/d10.BDI4Em4U_ZEalbg.webp 1349w&quot; /&gt;&lt;br /&gt;
+&lt;strong&gt;然后在仓库中，选择你需要的 skills 下载即可&lt;/strong&gt;&lt;br /&gt;
+&lt;img alt=&quot;&quot; loading=&quot;lazy&quot; width=&quot;1350&quot; height=&quot;899&quot; src=&quot;/_astro/d11.DXCHZHxY_wanbb.webp&quot; srcset=&quot;/_astro/d11.DXCHZHxY_ZBVwKS.webp 640w, /_astro/d11.DXCHZHxY_dDDS1.webp 750w, /_astro/d11.DXCHZHxY_Z2fV2t8.webp 828w, /_astro/d11.DXCHZHxY_2hpMm.webp 1080w, /_astro/d11.DXCHZHxY_1rbjt7.webp 1280w, /_astro/d11.DXCHZHxY_wanbb.webp 1350w&quot; /&gt;&lt;/p&gt;&lt;p&gt;最后在使用的时候，记得要给对应的 Agent 开启技能（skills）和 MCP 即可。&lt;/p&gt;&lt;/section&gt;&lt;/section&gt;&lt;section&gt;&lt;h3&gt;MCP 与 Skills 的使用教程&lt;a href=&quot;#mcp-与-skills-的使用教程&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h3&gt;&lt;section&gt;&lt;h4&gt;1. 自然语言使用法&lt;a href=&quot;#1-自然语言使用法&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;直接在 AI 工具中输入&lt;/p&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;MCP&lt;/strong&gt;：这里以 context7（对应 MCP 的唯一标题） 为例。&lt;/li&gt;
+&lt;/ul&gt;&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;1&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;该项目中，我要使用 XXXX 库，请帮我使用 context7（可替换成想使用的 MCP） 来查询最新文档，xxxx。&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Skills&lt;/strong&gt;：这里以 brainstorming（对应 Skill 的名称）为例。&lt;/li&gt;
+&lt;/ul&gt;&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;1&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;请使用 brainstorming ，我要搭建 xxxx&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;&lt;/section&gt;&lt;section&gt;&lt;h4&gt;2. 命令调用&lt;a href=&quot;#2-命令调用&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;在 Claude Code 和 OpenCode 中&lt;/strong&gt;：输入 &lt;code&gt;/&lt;/code&gt; ,即可选择 Skills 或 MCP。&lt;br /&gt;
+&lt;img alt=&quot;&quot; loading=&quot;lazy&quot; width=&quot;1955&quot; height=&quot;1199&quot; src=&quot;/_astro/d12.BQwvL3vc_Z1orXOH.webp&quot; srcset=&quot;/_astro/d12.BQwvL3vc_Z1X2qqP.webp 640w, /_astro/d12.BQwvL3vc_Z224iRv.webp 750w, /_astro/d12.BQwvL3vc_wxwJd.webp 828w, /_astro/d12.BQwvL3vc_1JUnkE.webp 1080w, /_astro/d12.BQwvL3vc_11Kv6o.webp 1280w, /_astro/d12.BQwvL3vc_sCkwt.webp 1668w, /_astro/d12.BQwvL3vc_Z1orXOH.webp 1955w&quot; /&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;在 Codex 中&lt;/strong&gt;： 输入&lt;code&gt;$&lt;/code&gt; ,即可选择 Skills;输入 &lt;code&gt;/&lt;/code&gt; ，又可选择 Skills 也可以选择 MCP.&lt;br /&gt;
+&lt;img alt=&quot;&quot; loading=&quot;lazy&quot; width=&quot;1480&quot; height=&quot;931&quot; src=&quot;/_astro/d13.zGUrXGwy_JEWmL.webp&quot; srcset=&quot;/_astro/d13.zGUrXGwy_ZeFx72.webp 640w, /_astro/d13.zGUrXGwy_BaNu1.webp 750w, /_astro/d13.zGUrXGwy_Z1PNT9f.webp 828w, /_astro/d13.zGUrXGwy_a140A.webp 1080w, /_astro/d13.zGUrXGwy_Z1AIla0.webp 1280w, /_astro/d13.zGUrXGwy_JEWmL.webp 1480w&quot; /&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;&lt;/section&gt;&lt;section&gt;&lt;h4&gt;3. 仅写普通提示词（不推荐）&lt;a href=&quot;#3-仅写普通提示词不推荐&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;当你没有说明要使用什么 MCP 或者 Sklls 的时候，此时会根据模型能力，按需获取工具使用。&lt;/p&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Skills 会自动匹配&lt;/strong&gt;：如果你的任务明显符合某个 skill 的 description，Agent 会自己选择使用。比如你说“帮我优化简历匹配 JD”，它可能自动用 resume-ats-optimizer。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;MCP 会按需求调用&lt;/strong&gt;：如果任务需要外部数据或工具，比如“查最新文档”“打开网页测试”“读取 Figma 设计稿”，Agent 可能会自动调用已配置的 MCP。&lt;/li&gt;
+&lt;/ul&gt;&lt;blockquote&gt;&lt;p&gt;当然，这种情况仅凭模型能力来驱动是否要使用工具并不可靠；例如编写 Skills 的人在没有写好 description，那么即使 Skill 写的再好，也不一定会被模型触发也无济于事。&lt;/p&gt;&lt;/blockquote&gt;&lt;/section&gt;&lt;/section&gt;&lt;/section&gt;
+&lt;section&gt;&lt;h2&gt;四、总结&lt;a href=&quot;#四总结&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;AI Coding 并不是让 AI 完全替代程序员&lt;/strong&gt;，而是让程序员在已有技术判断力的基础上，把 AI 作为编码、调试、学习和重构的协作工具。真正高效的使用方式，不是简单地把需求丢给 AI，而是学会拆分任务、描述上下文、审查结果，并用 Git 等工具保证修改过程可控。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;对于刚入门的开发者，可以先完成最小环境搭建&lt;/strong&gt;：安装 Git、Node.js，并选择一个自己顺手的 AI Coding 工具，例如 Codex、Claude Code、OpenCode、Cursor 或 Trae。熟悉基础使用后，再逐步引入 cc-switch 来统一管理供应商、API、MCP 和 Skills。&lt;/li&gt;
+&lt;li&gt;MCP 和 Skills 是进一步提升 AI Coding 效率的两个重要方向。MCP 解决的是“让 AI 连接外部工具和数据”的问题，Skills 解决的是“让 AI 按固定方法完成专业任务”的问题。前者偏能力扩展，后者偏流程复用，二者可以互补使用。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;建议新手的学习路径是&lt;/strong&gt;：先掌握 Git 与基础 AI 对话方式，再使用一个稳定的 Agent 工具完成真实开发任务；随后学习如何配置 MCP 查询文档、操作浏览器或连接外部服务；最后再通过 Skills 沉淀常用工作流。这样既能提升效率，也能避免盲目依赖 AI 带来的风险。&lt;/li&gt;
+&lt;li&gt;总之，AI Coding 的核心不是“让 AI 写代码”，而是让开发者拥有一个更强的协作伙伴。你越能清楚地表达目标、提供上下文、验证结果，AI 就越能成为真正提升生产力的工具。&lt;/li&gt;
+&lt;/ul&gt;&lt;blockquote&gt;&lt;p&gt;以上文章为个人经验 + AI 辅助校验；总结为 AI 编写与人工校验，如有错误请邮箱联系。&lt;/p&gt;&lt;/blockquote&gt;&lt;/section&gt;</content:encoded></item><item><title>如何高效使用 AI</title><link>https://kakue.top/posts/aicoding/useai/</link><guid isPermaLink="true">https://kakue.top/posts/aicoding/useai/</guid><description>一些 AI 使用方法和 AI 推荐。</description><pubDate>Thu, 30 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;section&gt;&lt;h2&gt;一、正确的选择 AI&lt;a href=&quot;#一正确的选择-ai&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;&lt;section&gt;&lt;h3&gt;对话类AI&lt;a href=&quot;#对话类ai&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;ChatGPT&lt;/strong&gt;：最流行的AI对话助手，适合写作、编程、学习&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Claude&lt;/strong&gt;：擅长长文本分析和深度对话&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;豆包&lt;/strong&gt;：字节推出的中文AI助手&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;通义千问&lt;/strong&gt;：阿里巴巴的AI助手&lt;/li&gt;
+&lt;/ul&gt;&lt;/section&gt;&lt;section&gt;&lt;h3&gt;创意工具&lt;a href=&quot;#创意工具&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Midjourney&lt;/strong&gt;：AI绘画工具，生成高质量艺术作品&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Stable Diffusion&lt;/strong&gt;：开源AI绘画工具&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;即梦&lt;/strong&gt;：AI视频编辑工具&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Suno&lt;/strong&gt;：AI音乐生成工具&lt;/li&gt;
+&lt;/ul&gt;&lt;/section&gt;&lt;section&gt;&lt;h3&gt;办公工具&lt;a href=&quot;#办公工具&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Notion AI&lt;/strong&gt;：智能笔记和知识管理&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;DeepL&lt;/strong&gt;：高质量AI翻译工具&lt;/li&gt;
+&lt;/ul&gt;&lt;/section&gt;&lt;section&gt;&lt;h3&gt;Agent 推荐&lt;a href=&quot;#agent-推荐&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;编程开发类&lt;/li&gt;
+&lt;/ol&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Claude Code&lt;/strong&gt; 官方 CLI，深度代码理解和修改&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Codex&lt;/strong&gt; 官方 CLI， 深度代码理解和修改&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Cursor&lt;/strong&gt; 代码编辑器，目前最流行&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;GitHub Copilot&lt;/strong&gt;： 微软/GitHub，IDE 插件生态最成熟&lt;/li&gt;
+&lt;/ul&gt;&lt;ol&gt;
+&lt;li&gt;通用任务类&lt;/li&gt;
+&lt;/ol&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Manus&lt;/strong&gt;：国产全能 Agent，最近很火，能完成复杂多步任务&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;OpenAI Operator&lt;/strong&gt;： 操控浏览器执行任务&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Claude.ai Projects&lt;/strong&gt;：带记忆和文件上下文的长期协作&lt;/li&gt;
+&lt;/ul&gt;&lt;ol&gt;
+&lt;li&gt;工作流/自动化类&lt;/li&gt;
+&lt;/ol&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Dify&lt;/strong&gt;：可视化构建 AI 应用，部署方便&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Coze（扣子）&lt;/strong&gt; &lt;strong&gt;：&lt;/strong&gt; 字节出品，低代码搭建 Agent，国内使用友好&lt;/li&gt;
+&lt;/ul&gt;&lt;/section&gt;&lt;/section&gt;
+&lt;section&gt;&lt;h2&gt;二、明确目标与问题&lt;a href=&quot;#二明确目标与问题&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;在提问前，先明确你想要从 AI 那里获得什么样的信息或帮助。&lt;/p&gt;&lt;section&gt;&lt;h3&gt;提示词结构&lt;a href=&quot;#提示词结构&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;(1) 问题–背景–请求&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;
+&lt;li&gt;问题(Question):明确你想解决的问题是什么。&lt;/li&gt;
+&lt;li&gt;背景(Background):提供足够的背景信息，帮助模型理解问题的上下文。&lt;/li&gt;
+&lt;li&gt;请求(Request):具体说明你希望模型做什么。&lt;/li&gt;
+&lt;/ul&gt;&lt;blockquote&gt;&lt;p&gt;示例&lt;/p&gt;&lt;p&gt;问题：我的React应用首屏加载时间超过5秒，用户体验很差&lt;br /&gt;
+背景：项目使用Vite构建，有大量第三方UI库（Antd、ECharts）…&lt;br /&gt;
+请求：请分析可能的原因并给出具体的优化方案，优先考虑代码分割和懒加载&lt;/p&gt;&lt;/blockquote&gt;&lt;p&gt;&lt;strong&gt;(2) 目标–条件-期望&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;
+&lt;li&gt;目标(Goal):描述你希望通过与模型的交互达成的最终目标。&lt;/li&gt;
+&lt;li&gt;条件(Condition):说明实现这个目标的任何特定条件或限制。&lt;/li&gt;
+&lt;li&gt;期望(Expectation);详细描述你期望的输出类型、格式或内容。&lt;/li&gt;
+&lt;/ul&gt;&lt;blockquote&gt;&lt;p&gt;示例&lt;/p&gt;&lt;p&gt;目标：请将图中的文本整理出来&lt;br /&gt;
+条件：在文本中加上示例代码&lt;br /&gt;
+期望：使用 markdown 格式方便我复制到笔记软件上&lt;/p&gt;&lt;/blockquote&gt;&lt;p&gt;&lt;strong&gt;(3) 场景–任务–动作–结果&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;
+&lt;li&gt;场景(Situation):描述你的问题或需求的场景。&lt;/li&gt;
+&lt;li&gt;任务(Task):你希望模型完成的具体任务。&lt;/li&gt;
+&lt;li&gt;动作(Action):你期望模型采取什么动作或方法来执行任务。&lt;/li&gt;
+&lt;li&gt;结果(Result):你期望的结果是什么。&lt;/li&gt;
+&lt;/ul&gt;&lt;p&gt;示例︰我是一名前端程序员，我正在学习 React，我需要你来协助我学习，接下来我会问你有关 React 的内容，我希望你可以作为我的老师，为我详细讲解 React 的有关知识。&lt;/p&gt;&lt;p&gt;以上是比较常用的三种结构化提示词的方式，其余的可以观看博客学习 ↓&lt;br /&gt;
+&lt;a href=&quot;https://langgptai.feishu.cn/wiki/C9i7wrU4eir4BmkIgQucUYUQndd&quot; target=&quot;_blank&quot;&gt;写出高质量 Prompt&lt;/a&gt;&lt;/p&gt;&lt;/section&gt;&lt;section&gt;&lt;h3&gt;处理日常简单业务&lt;a href=&quot;#处理日常简单业务&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;当处理日常的简单业务的时候，可以用最精简的语言来写 prompt&lt;br /&gt;
+如，在日常学习的过程中，在视频上看到了可以记录的笔记，那么此时可以截图，然后粘贴给豆包：&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=NzQzZmUyNjNmZGNiYzkzZjhkOTYyODhlM2I2ZDA4YzlfYTNmMzkzMThjNGM2NGJhZTQ5ZDFjNTA4YzlmNTQwOTZfSUQ6NzYyNDUzOTcyMjkwMzM0MjAyMl8xNzgwMzIyNzA5OjE3ODA0MDkxMDlfVjM&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;&lt;p&gt;当然，获得的类型是不确定的，如果想要高度自定义则需要进行提示词的结构化，如：这是我要记录到笔记的内容，你只需要提取文本内容即可，使用 markdown 格式方便我粘贴在笔记软件中。&lt;/p&gt;&lt;/section&gt;&lt;/section&gt;
+&lt;section&gt;&lt;h2&gt;三、其他注意事项&lt;a href=&quot;#三其他注意事项&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;&lt;section&gt;&lt;h3&gt;1. 上下文管理&lt;a href=&quot;#1-上下文管理&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;不要在一个超长对话里问所有问题，上下文过长会导致AI”遗忘”前面的内容，质量下降&lt;/li&gt;
+&lt;li&gt;按话题开新对话，保持上下文聚焦&lt;/li&gt;
+&lt;li&gt;重要信息在对话中途可以重新粘贴提醒AI&lt;/li&gt;
+&lt;/ul&gt;&lt;/section&gt;&lt;section&gt;&lt;h3&gt;2. 任务拆解&lt;a href=&quot;#2-任务拆解&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h3&gt;&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;1&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;❌ 一次性：帮我做一个完整的电商系统&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;2&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;✅ 拆解后：先设计数据库结构 → 再做用户模块 → 再做商品模块&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;3&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;AI对大而模糊的任务容易输出质量差，小而具体的任务效果更好。&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;&lt;/section&gt;&lt;section&gt;&lt;h3&gt;3. 验证和迭代&lt;a href=&quot;#3-验证和迭代&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;不要无脑信任输出，尤其是代码、数据、引用来源&lt;/li&gt;
+&lt;li&gt;把AI的输出当”初稿”而不是”答案”&lt;/li&gt;
+&lt;li&gt;对不满意的地方直接说”这里不对，因为…”，比重新提问更高效&lt;/li&gt;
+&lt;/ul&gt;&lt;/section&gt;&lt;section&gt;&lt;h3&gt;4. 选对模型&lt;a href=&quot;#4-选对模型&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h3&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;任务&lt;/th&gt;&lt;th&gt;推荐&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;复杂推理、长文档&lt;/td&gt;&lt;td&gt;Opus / GPT-5.5&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;日常编程、写作&lt;/td&gt;&lt;td&gt;Opus / GPT-5.5&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;快速简单问答&lt;/td&gt;&lt;td&gt;Haiku / GPT-4o mini&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;p&gt;用重型模型做简单任务是资源浪费，反之则质量不足。&lt;/p&gt;&lt;/section&gt;&lt;section&gt;&lt;h3&gt;5. 给AI提供参考资料&lt;a href=&quot;#5-给ai提供参考资料&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;AI的知识有截止日期，遇到新技术/新文档时：&lt;/p&gt;&lt;ul&gt;
+&lt;li&gt;直接把官方文档该部分的核心内容粘贴进去
+&lt;ul&gt;
+&lt;li&gt;现在不用了，安装 context7 mcp 然后让 ai 工具调用 context7 即可&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;提供错误日志、截图、代码片段&lt;/li&gt;
+&lt;li&gt;给出你已经尝试过的方案，避免AI重复建议&lt;/li&gt;
+&lt;/ul&gt;&lt;/section&gt;&lt;section&gt;&lt;h3&gt;6. 建立个人工作流&lt;a href=&quot;#6-建立个人工作流&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;把常用的提示词模板保存下来复用&lt;/li&gt;
+&lt;li&gt;对于重复性任务（周报、代码review、翻译）固定格式&lt;/li&gt;
+&lt;li&gt;用Project/记忆功能让AI了解你的偏好和背景&lt;/li&gt;
+&lt;/ul&gt;&lt;/section&gt;&lt;section&gt;&lt;h3&gt;7. 明确AI的边界&lt;a href=&quot;#7-明确ai的边界&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;创意类、逻辑推理类 → AI擅长&lt;/li&gt;
+&lt;li&gt;实时信息、精确计算、法律医疗建议 → 需要人工验证&lt;/li&gt;
+&lt;li&gt;知道什么时候该停止用AI，自己动手更快&lt;/li&gt;
+&lt;/ul&gt;&lt;/section&gt;&lt;/section&gt;</content:encoded></item><item><title>最新 vuepress2 获取所有 formatter 教程</title><link>https://kakue.top/posts/frontend/getallformatter/</link><guid isPermaLink="true">https://kakue.top/posts/frontend/getallformatter/</guid><description>一次性获得所有 formatter</description><pubDate>Tue, 02 Jun 2026 00:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;&lt;p&gt;当前 vuepress 版本为：v2.0.0-rc.26&lt;/p&gt;&lt;/blockquote&gt;
+&lt;section&gt;&lt;h2&gt;1. 写插件：把所有 frontmatter 挂到 siteData&lt;a href=&quot;#1-写插件把所有-frontmatter-挂到-sitedata&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;核心代码&lt;/strong&gt;：&lt;/p&gt;&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;.vuepress/getAllFrontmatter.js&lt;/span&gt;&lt;/figcaption&gt;&lt;pre&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;1&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;export&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;const&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;getAllFrontmatter&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt; {&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;2&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;  &lt;/span&gt;&lt;span&gt;name&lt;/span&gt;&lt;span&gt;:&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;&apos;get-all-frontmatter&apos;&lt;/span&gt;&lt;span&gt;,&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;3&lt;/div&gt;&lt;/div&gt;&lt;div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;4&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;  &lt;/span&gt;&lt;span&gt;onInitialized&lt;/span&gt;&lt;span&gt;&lt;span&gt;(&lt;/span&gt;&lt;span&gt;app&lt;/span&gt;&lt;span&gt;) {&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;5&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;    &lt;/span&gt;&lt;span&gt;// 自定义 frontmatter 属性，将 app.pages 中的 page.frontmatter 映射在 frontmatter 上&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;6&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;&lt;span&gt;    &lt;/span&gt;&lt;/span&gt;&lt;span&gt;app&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;siteData&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;frontmatter&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;app&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;/span&gt;&lt;span&gt;pages&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;map&lt;/span&gt;&lt;span&gt;&lt;span&gt;((&lt;/span&gt;&lt;span&gt;page&lt;/span&gt;&lt;span&gt;) &lt;/span&gt;&lt;/span&gt;&lt;span&gt;=&amp;gt;&lt;/span&gt;&lt;span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;page&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;/span&gt;&lt;span&gt;frontmatter&lt;/span&gt;&lt;span&gt;)&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;7&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;&lt;span&gt;  &lt;/span&gt;&lt;/span&gt;&lt;span&gt;},&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;8&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;}&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;&lt;/section&gt;
+&lt;section&gt;&lt;h2&gt;2. 在配置中注册插件&lt;a href=&quot;#2-在配置中注册插件&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;.vuepress/config.js&lt;/span&gt;&lt;/figcaption&gt;&lt;pre&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;1&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;import&lt;/span&gt;&lt;span&gt; { &lt;/span&gt;&lt;span&gt;defineUserConfig&lt;/span&gt;&lt;span&gt; } &lt;/span&gt;&lt;span&gt;from&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;&apos;vuepress&apos;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;2&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;import&lt;/span&gt;&lt;span&gt; { &lt;/span&gt;&lt;span&gt;getAllFrontmatter&lt;/span&gt;&lt;span&gt; } &lt;/span&gt;&lt;span&gt;from&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;&apos;./getAllFrontmatter.js&apos;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;3&lt;/div&gt;&lt;/div&gt;&lt;div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;4&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;export&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;default&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;defineUserConfig&lt;/span&gt;&lt;span&gt;({&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;5&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;  &lt;/span&gt;&lt;span&gt;plugins&lt;/span&gt;&lt;span&gt;:&lt;/span&gt;&lt;span&gt; [&lt;/span&gt;&lt;span&gt;getAllFrontmatter&lt;/span&gt;&lt;span&gt;],&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;6&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;})&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;&lt;p&gt;注册完成以后，前端组件里就可以通过 useSiteData() 读取：&lt;/p&gt;&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;1&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;&lt;span&gt;siteData&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;/span&gt;&lt;span&gt;value&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;frontmatter&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;&lt;/section&gt;
+&lt;section&gt;&lt;h2&gt;3. 在组件中使用&lt;a href=&quot;#3-在组件中使用&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;.vuepress\components\info.vue&lt;/span&gt;&lt;span&gt;展开&lt;/span&gt;&lt;span&gt;收起&lt;/span&gt;&lt;/figcaption&gt;&lt;pre&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;1&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;&amp;lt;&lt;/span&gt;&lt;span&gt;template&lt;/span&gt;&lt;span&gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;2&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;&lt;span&gt;  &lt;/span&gt;&lt;/span&gt;&lt;span&gt;&amp;lt;&lt;/span&gt;&lt;span&gt;div&lt;/span&gt;&lt;span&gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;3&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;&lt;span&gt;    &lt;/span&gt;&lt;/span&gt;&lt;span&gt;&amp;lt;&lt;/span&gt;&lt;span&gt;div&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;v-for&lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt;&quot;(item, index) in frontmatter&quot;&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;:key&lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt;&quot;index&quot;&lt;/span&gt;&lt;span&gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;4&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;&lt;span&gt;      &lt;/span&gt;&lt;/span&gt;&lt;span&gt;&amp;lt;&lt;/span&gt;&lt;span&gt;pre&lt;/span&gt;&lt;span&gt;&amp;gt;{{ JSON.stringify(item, null, 2) }}&amp;lt;/&lt;/span&gt;&lt;span&gt;pre&lt;/span&gt;&lt;span&gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;5&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;&lt;span&gt;    &lt;/span&gt;&lt;/span&gt;&lt;span&gt;&amp;lt;/&lt;/span&gt;&lt;span&gt;div&lt;/span&gt;&lt;span&gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;6&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;&lt;span&gt;  &lt;/span&gt;&lt;/span&gt;&lt;span&gt;&amp;lt;/&lt;/span&gt;&lt;span&gt;div&lt;/span&gt;&lt;span&gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;7&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;&amp;lt;/&lt;/span&gt;&lt;span&gt;template&lt;/span&gt;&lt;span&gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;8&lt;/div&gt;&lt;/div&gt;&lt;div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;9&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;&amp;lt;&lt;/span&gt;&lt;span&gt;script&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;setup&lt;/span&gt;&lt;span&gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;10&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;import&lt;/span&gt;&lt;span&gt; { &lt;/span&gt;&lt;span&gt;computed&lt;/span&gt;&lt;span&gt; } &lt;/span&gt;&lt;span&gt;from&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;&apos;vue&apos;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;11&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;import&lt;/span&gt;&lt;span&gt; { &lt;/span&gt;&lt;span&gt;useSiteData&lt;/span&gt;&lt;span&gt; } &lt;/span&gt;&lt;span&gt;from&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;&apos;vuepress/client&apos;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;12&lt;/div&gt;&lt;/div&gt;&lt;div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;13&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;const&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;siteData&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;useSiteData&lt;/span&gt;&lt;span&gt;()&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;14&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;const&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;frontmatter&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;computed&lt;/span&gt;&lt;span&gt;(() &lt;/span&gt;&lt;span&gt;=&amp;gt;&lt;/span&gt;&lt;span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;siteData&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;/span&gt;&lt;span&gt;value&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;frontmatter&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;||&lt;/span&gt;&lt;span&gt; [])&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;15&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;&amp;lt;/&lt;/span&gt;&lt;span&gt;script&lt;/span&gt;&lt;span&gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;div&gt;&lt;/div&gt;&lt;/div&gt;&lt;span&gt;展开&lt;/span&gt;&lt;span&gt;收起&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;p&gt;意思是：&lt;/p&gt;&lt;ul&gt;
+&lt;li&gt;useSiteData() 取到 VuePress 全局站点数据&lt;/li&gt;
+&lt;li&gt;siteData.value.frontmatter 就是你在插件里挂进去的全站 frontmatter&lt;/li&gt;
+&lt;/ul&gt;&lt;/section&gt;
+&lt;section&gt;&lt;h2&gt;4. 注册这个组件&lt;a href=&quot;#4-注册这个组件&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;.vuepress/client.js&lt;/span&gt;&lt;/figcaption&gt;&lt;pre&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;1&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;import&lt;/span&gt;&lt;span&gt; { &lt;/span&gt;&lt;span&gt;defineClientConfig&lt;/span&gt;&lt;span&gt; } &lt;/span&gt;&lt;span&gt;from&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;&apos;vuepress/client&apos;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;2&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;import&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;AllFrontmatter&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;from&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;&apos;./components/AllFrontmatter.vue&apos;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;3&lt;/div&gt;&lt;/div&gt;&lt;div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;4&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;export&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;default&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;defineClientConfig&lt;/span&gt;&lt;span&gt;({&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;5&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;  &lt;/span&gt;&lt;span&gt;enhance&lt;/span&gt;&lt;span&gt;&lt;span&gt;({ &lt;/span&gt;&lt;span&gt;app&lt;/span&gt;&lt;span&gt; }) {&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;6&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;&lt;span&gt;    &lt;/span&gt;&lt;/span&gt;&lt;span&gt;app&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;component&lt;/span&gt;&lt;span&gt;(&lt;/span&gt;&lt;span&gt;&apos;info&apos;&lt;/span&gt;&lt;span&gt;, &lt;/span&gt;&lt;span&gt;info&lt;/span&gt;&lt;span&gt;)&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;7&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;&lt;span&gt;  &lt;/span&gt;&lt;/span&gt;&lt;span&gt;},&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;8&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;})&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;&lt;/section&gt;
+&lt;section&gt;&lt;h2&gt;5. 在 markdown 中使用这个组件&lt;a href=&quot;#5-在-markdown-中使用这个组件&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;1&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;---&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;2&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;title&lt;/span&gt;&lt;span&gt;: &lt;/span&gt;&lt;span&gt;Info Page&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;3&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;description&lt;/span&gt;&lt;span&gt;: &lt;/span&gt;&lt;span&gt;A compact rendering of all collected frontmatter records.&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;4&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;---&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;5&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;## Site data snapshot&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;6&lt;/div&gt;&lt;/div&gt;&lt;div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;7&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;&amp;lt;&lt;/span&gt;&lt;span&gt;info&lt;/span&gt;&lt;span&gt;/&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;&lt;/section&gt;
+&lt;section&gt;&lt;h2&gt;6. 验收成果&lt;a href=&quot;#6-验收成果&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&lt;img alt=&quot;&quot; loading=&quot;lazy&quot; width=&quot;2559&quot; height=&quot;1237&quot; src=&quot;/_astro/d1.BtieyKcn_1gVoQf.webp&quot; srcset=&quot;/_astro/d1.BtieyKcn_1l9U02.webp 640w, /_astro/d1.BtieyKcn_2eoJbp.webp 750w, /_astro/d1.BtieyKcn_2lGr45.webp 828w, /_astro/d1.BtieyKcn_ZT1Mhy.webp 1080w, /_astro/d1.BtieyKcn_Z2mRNqe.webp 1280w, /_astro/d1.BtieyKcn_ZKJ7ak.webp 1668w, /_astro/d1.BtieyKcn_ZPPvOU.webp 2048w, /_astro/d1.BtieyKcn_1gVoQf.webp 2559w&quot; /&gt;&lt;/p&gt;&lt;/section&gt;</content:encoded></item></channel></rss>
