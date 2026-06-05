@@ -24,7 +24,7 @@ export const friendsPageConfig: FriendsPageConfig = {
 export const friendsConfig: FriendLink[] = [
 	{
 		title: "TouchAI",
-		imgurl: "https://avatars.githubusercontent.com/u/266058215?s=200&v=4",
+		imgurl: "https://touch-ai.org/",
 		desc: "一触即达的极简桌面效率Agent。",
 		siteurl: "https://github.com/TouchAI-org/TouchAI",
 		tags: ["Agent"],
@@ -34,7 +34,7 @@ export const friendsConfig: FriendLink[] = [
 	{
 		title: "Dromara",
 		imgurl: "https://dromara.org/assets/img/logo-animation/logo.webp",
-		desc: "Firefly主题模板文档",
+		desc: "Dromara 官网",
 		siteurl: "https://dromara.org/",
 		tags: ["Docs"],
 		weight: 9,
