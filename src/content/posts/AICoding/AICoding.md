@@ -161,6 +161,7 @@ https://www.mcpworld.com/
 
 - Skills 的资源网站
 https://www.skills.sh/
+https://skillhub.cloud.tencent.com/
 https://skillsmp.com/zh
 
 #### 4.2 如何安装/配置
